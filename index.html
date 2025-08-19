@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Quarterly Earnings Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Intro Slide -->
+        <section>
+          <h1>Quarterly Earnings Report</h1>
+          <p>Prepared by: <b>24f1001581@ds.study.iitm.ac.in</b></p>
+          <aside class="notes">
+            Welcome everyone, this report highlights financial performance for the quarter.
+          </aside>
+        </section>
+
+        <!-- Markdown Slide -->
+        <section data-markdown>
+          <textarea data-template>
+          ## Key Highlights
+
+          - Revenue growth **12% YoY**
+          - Net profit margin improved
+          - Expansion in APAC markets
+          </textarea>
+        </section>
+
+        <!-- Fragments -->
+        <section>
+          <h2>Drivers of Growth</h2>
+          <ul>
+            <li class="fragment">Increased digital adoption</li>
+            <li class="fragment">Operational efficiency</li>
+            <li class="fragment fade-up">New product launches</li>
+          </ul>
+          <aside class="notes">Reveal each driver step by step to build suspense.</aside>
+        </section>
+
+        <!-- Code Sample -->
+        <section>
+          <h2>Data Analysis Code</h2>
+          <pre><code class="python" data-trim data-line-numbers="2,4-6">
+import pandas as pd
+data = pd.read_csv('earnings.csv')
+
+# Calculate revenue growth
+data['growth'] = data['revenue'].pct_change()
+print(data['growth'])
+          </code></pre>
+        </section>
+
+        <!-- Math Formula -->
+        <section>
+          <h2>Financial Formula</h2>
+          <p>Return on Equity (ROE):</p>
+          \[
+          ROE = \frac{Net\ Income}{Shareholder's\ Equity}
+          \]
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide',
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>
